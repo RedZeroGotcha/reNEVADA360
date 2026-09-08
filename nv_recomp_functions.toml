@@ -1,0 +1,9 @@
+# Correções de boundary de função do projeto nv_recomp.
+# Fica NA MESMA PASTA do manifesto principal (nv_recomp_manifest.toml),
+# referenciado via includes = ["nv_recomp_functions.toml"] no [entrypoint].
+#
+# Cole aqui direto, NUNCA no manifesto principal (é ignorado
+# silenciosamente lá nessa versão do SDK).
+
+[functions]
+0x82DCE160 = { name = "FUN_82dce160", size = 136 }
