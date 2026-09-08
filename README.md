@@ -26,6 +26,23 @@ New port ->> Android/Switch: arm64
 Recomp ->> New Render/Jolt Physics: Better experience
 ```
 
+## Build project:
+1- Download and clone SDK: https://github.com/rexglue/rexglue-sdk.git
+
+2- Use -help in CMD/VS 2022/VS 2026 to see to make projects, fix bugs, the doc ans others
+
+3- rexglue init --project-name "nv_recomp" --xex-path "{xex path}" --project-root ./nv_recomp
+
+4- rexglue --verbose --log-file codegen.log codegen
+
+5- cmake --preset win-amd64-debug (project and SDK)
+
+6- cmake --build --preset win-amd64-debug (project and SDK)
+
+7- cdb -g -G -logo game_run.log -c "g;kb;q" "{path of your .exe recompiled}" --game_data_root="{assets of game}" - Debug .exe in CMD of VS
+
+
+
 It’s still very early days, and it will take a while for things to get done, but we’ll get there eventually. If you’re interested, take a look at this other project where *Fallout: New Vegas* is being ported to the Godot Engine: https://github.com/nikamigaming-create/OpenNV
 
 ## Licence:
